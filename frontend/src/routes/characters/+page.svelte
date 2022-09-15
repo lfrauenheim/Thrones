@@ -1,7 +1,6 @@
 <script>
-  import { writable } from 'svelte/store'
+  import { charStore } from '$lib/stores/store'
 
-  const charStore = writable(0)
   export let data
   let promise  
 
@@ -16,6 +15,10 @@
     promise = getChars(p)
   }
 </script>
+
+<svelte:head>
+  <title>{$charStore} | THRONES</title>
+</svelte:head>
 
 <div class="row">
   <div class="col-6">
@@ -86,7 +89,6 @@
       </div>
     </div>
   {/if}
-  
 </div>
 
 
