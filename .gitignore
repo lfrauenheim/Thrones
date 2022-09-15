@@ -1,5 +1,4 @@
 frontend/node_modules
-backend/node_modules
 frontend/.DS_Store
 frontend/build
 frontend/.svelte-kit
@@ -7,3 +6,5 @@ frontend/package
 frontend/.env
 frontend/.env.*
 frontend/!.env.example
+backend/.env
+backend/node_modules
