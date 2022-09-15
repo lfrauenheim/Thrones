@@ -1,23 +1,26 @@
 <script>
+  import {page} from '$app/stores' 
+  import Charlist from "$lib/components/Charlist.svelte";
+    
+  $: p = $page.params.character
   export let data
 </script>
 
 <div class="container">
   <div class="row">
-    <div class="col-6">
-      {#each data.characters as character}
-        <a href="/character/{character.name}" data-sveltekit-prefetch>
-          {character.name}
-        </a>  
-      {/each}
-    </div>
+    <Charlist {data} {p} />
     <div class="col-6">
       <h1>{data.character.name}</h1>
+      <img src="{data.character.image}" alt="{data.character.name}" class="img-fluid">
       <p>Born: {data.character.born}</p>
-      <p>Died: {data.character.died}</p>
+      {#if data.character.died}
+        <p>Died: {data.character.died}</p>
+      {/if}
       <p>Father: {data.character.father}</p>
       <p>Mother: {data.character.mother}</p>
-      <p>Spouse: {data.character.spouse}</p>
+      {#if data.character.spouse}
+        <p>Spouse: {data.character.spouse}</p>  
+      {/if}
       <p>Culture: {data.character.culture}</p>
       <h2>Titles:</h2>
       {#each data.character.titles as title}
@@ -27,7 +30,10 @@
       {#each data.character.aliases as alias}
         <p>{alias}</p>
       {/each}
-      <p>Allegiances: {data.character.allegiances}</p>
+      <h2>Allegiances:</h2>
+      {#each data.character.allegiances as allegiance}
+        <p>{allegiance}</p>
+      {/each}
       <h2>Appearances:</h2>
       {#each data.character.tvSeries as series}
         <p>{series}</p>

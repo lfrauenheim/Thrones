@@ -13,7 +13,7 @@ const characterSchema = new Schema({
   culture: String,
   titles: [String],
   aliases: [String],
-  allegiances: String,
+  allegiances: [String],
   tvSeries: [String],
   playedBy: String
 })
