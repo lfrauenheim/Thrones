@@ -1,8 +1,15 @@
 <script>
   export let data
-  console.log({data})
 </script>
 
-{#each data.data as character}
-  {character.name}
-{/each}
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      {#each data.characters as character}
+        <a href="/character/{character.name}" data-sveltekit-prefetch>
+          {character.name}
+        </a>  
+      {/each}
+    </div>
+  </div>
+</div>
