@@ -1,10 +1,5 @@
-<script>
-  import Charlist from "$lib/components/Charlist.svelte";
-  export let data
-</script>
-
-<div class="container">
-  <div class="row">
-    <Charlist {data}/>
-  </div>
+<div class="list-group mt-5">
+  <a href="/characters" class="btn btn-light fw-bold mb-1" data-sveltekit-prefetch>CHARACTERS</a>
+  <a href="#houses" class="btn btn-light fw-bold mb-1" data-sveltekit-prefetch>HOUSES</a>
 </div>
+
