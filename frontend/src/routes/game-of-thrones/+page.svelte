@@ -28,11 +28,11 @@
     <div class="accordion" id="accordion">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
             <img class="logo" src="http://slayed.ddns.net:8080/House-Targaryen-Main-Shield.PNG.webp" alt="House Targaryen">&nbsp;<h2 class="text-danger fw-bold">House Targaryen</h2>
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
           <div class="accordion-body p-0">
             <div class="list-group">
               {#each data.characters[0].tar as character}
@@ -48,7 +48,7 @@
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
             <img src="http://slayed.ddns.net:8080/House-Lannister-Main-Shield.PNG.webp" alt="House Lannister" class="logo">&nbsp;<h2 class="fw-bold text-warning">House Lannister</h2>
           </button>
         </h2>
@@ -68,7 +68,7 @@
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
             <img src="http://slayed.ddns.net:8080/House-Stark-Main-Shield.PNG.webp" alt="House Stark" class="logo">&nbsp;<h2 class="fw-bold text-secondary">House Stark</h2>
           </button>
         </h2>
@@ -88,7 +88,7 @@
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-controls="collapseFour">
             <img src="http://slayed.ddns.net:8080/House-Baratheon-Main-Shield.PNG.webp" alt="House Baratheon" class="logo">&nbsp;<h2 class="fw-bold">House Baratheon</h2>
           </button>
         </h2>
