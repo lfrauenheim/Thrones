@@ -15,7 +15,8 @@ const characterSchema = new Schema({
   aliases: [String],
   allegiances: [String],
   tvSeries: [String],
-  playedBy: String
+  playedBy: String,
+  nav: String
 })
 
 const Character = mongoose.model('Character', characterSchema)

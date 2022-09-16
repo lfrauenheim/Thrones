@@ -1,6 +1,6 @@
 /** @type {import('./$types').PageLoad} */
 
-export async function load({ fetch, params }) {
+export async function load({ fetch }) {
   const res = await fetch('http://localhost:3000/api/characters')
 
   return {
