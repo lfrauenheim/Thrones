@@ -9,7 +9,7 @@ export { matchers } from './client-matchers.js';
 
 			export const dictionary = {
 	"": [2],
-	"characters": [3]
+	"game-of-thrones": [3]
 };
 
 			export const hooks = {

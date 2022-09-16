@@ -1,5 +1,6 @@
 <script>
   import { charStore } from '$lib/stores/store'
+  import { fade } from 'svelte/transition'
 
   export let data
   let promise  
@@ -14,6 +15,7 @@
   function handleChars(p) {
     promise = getChars(p)
   }
+  $: console.log($charStore)
 </script>
 
 <svelte:head>
@@ -36,9 +38,9 @@
     <div class="col-6 bg-light rounded">
       <div class="row">
         {#await promise}
-          Loading...
+          <!--loading-->
         {:then data} 
-          <div class="col-6">
+          <div class="col-6" in:fade>
             <h2 class="pt-2">{data.name}</h2>
             <p><strong>Born:</strong> {data.born}</p>
             {#if data.died}
@@ -76,7 +78,7 @@
               </ul>  
             {/if}
           </div>
-          <div class="col-6">
+          <div class="col-6" in:fade>
             <img src="{data.image}" alt="{data.name}" class="img-fluid pt-2">
             <p class="m-0"><strong>Appearances:</strong></p>
             <ul>
