@@ -3,7 +3,6 @@
   import { fade } from 'svelte/transition'
 
   export let data
-  console.log({data})
   let promise  
 
   async function getChars(p) {
@@ -16,7 +15,6 @@
   function handleChars(p) {
     promise = getChars(p)
   }
-  $: console.log('charStore: ', $charStore)
 </script>
 
 <svelte:head>

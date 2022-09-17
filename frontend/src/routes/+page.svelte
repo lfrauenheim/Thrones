@@ -2,8 +2,6 @@
   import { charStore } from '$lib/stores/store'
 
   charStore.set('')
-
-  $: console.log('charStore: ', $charStore)
 </script>
 
 <svelte:head>
