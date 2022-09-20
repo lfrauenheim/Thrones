@@ -14,8 +14,6 @@
       <h1 class="d-flex justify-content-center text-light">THRONES</h1>
     </a>
   </div>
-  <div class="container">
-    <slot></slot>
-  </div>
+  <slot></slot>
 </div>
 
