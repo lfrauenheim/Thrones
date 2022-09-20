@@ -95,7 +95,13 @@
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordion">
             <div class="accordion-body p-0">
               <div class="list-group">
-                
+                {#each data.characters[0].bar as character}
+                  {#if $charStore == character.name}
+                    <a href="#{character.name}" class="list-group-item fw-bold active" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                  {:else}
+                    <a href="#{character.name}" class="list-group-item fw-bold" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                  {/if}
+                {/each}  
               </div>
             </div>
           </div>
