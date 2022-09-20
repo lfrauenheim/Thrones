@@ -1,6 +1,9 @@
 <script>
   import { charStore } from '$lib/stores/store'
   import { fade } from 'svelte/transition'
+  
+  //reset charStore
+  charStore.set('')
 
   export let data
   let promise  
