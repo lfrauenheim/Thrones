@@ -18,10 +18,10 @@
     <!--characters & dragons-->
     <div class="col-6">
       <div class="accordion" id="accordion">
-        <div class="accordion-item">
+        <div class="accordion-item bg-dark border-1 border-secondary">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
-              Characters
+            <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
+              <h2 class="text-light fw-bold">Characters</h2>
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
@@ -32,10 +32,10 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item bg-dark border-1 border-secondary">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
-              Dragons
+            <button class="accordion-button collapsed fw-bold fs-5 bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
+              <h2 class="fw-bold text-light">Dragons</h2>
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
