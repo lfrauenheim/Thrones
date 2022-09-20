@@ -37,9 +37,9 @@
               <div class="list-group">
                 {#each data.characters[0].tar as character}
                   {#if $charStore == character.name}
-                    <a href="javascript:void(0)" class="list-group-item fw-bold active" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                    <a href="#{character.name}" class="list-group-item fw-bold active" on:click="{() => handleChars(character.name)}">{character.name}</a>
                   {:else}
-                    <a href="javascript:void(0)" class="list-group-item fw-bold" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                    <a href="#{character.name}" class="list-group-item fw-bold" on:click="{() => handleChars(character.name)}">{character.name}</a>
                   {/if}
                 {/each}  
               </div>
@@ -57,9 +57,9 @@
               <div class="list-group">
                 {#each data.characters[0].lan as character}
                   {#if $charStore == character.name}
-                    <a href="javascript:void(0)" class="list-group-item fw-bold active" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                    <a href="#{character.name}" class="list-group-item fw-bold active" on:click="{() => handleChars(character.name)}">{character.name}</a>
                   {:else}
-                    <a href="javascript:void(0)" class="list-group-item fw-bold" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                    <a href="#{character.name}" class="list-group-item fw-bold" on:click="{() => handleChars(character.name)}">{character.name}</a>
                   {/if}
                 {/each}  
               </div>
@@ -77,9 +77,9 @@
               <div class="list-group">
                 {#each data.characters[0].stark as character}
                   {#if $charStore == character.name}
-                    <a href="javascript:void(0)" class="list-group-item fw-bold active" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                    <a href="#{character.name}" class="list-group-item fw-bold active" on:click="{() => handleChars(character.name)}">{character.name}</a>
                   {:else}
-                    <a href="javascript:void(0)" class="list-group-item fw-bold" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                    <a href="#{character.name}" class="list-group-item fw-bold" on:click="{() => handleChars(character.name)}">{character.name}</a>
                   {/if}
                 {/each}  
               </div>
