@@ -21,7 +21,7 @@
   <title>{$charStore} | THRONES</title>
 </svelte:head>
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <!--houses-->
     <div class="col-6">
