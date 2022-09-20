@@ -18,8 +18,16 @@
 </script>
 
 <svelte:head>
-  <title>{$charStore} | THRONES</title>
+  <title>{$charStore} | Game Of Thrones</title>
+  <style>
+    body {
+      background-image: url('http://slayed.ddns.net:8080/got.jpg'); 
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
 </svelte:head>
+
 
 <div class="container mt-5">
   <div class="row">

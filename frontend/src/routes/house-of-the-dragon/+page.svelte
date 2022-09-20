@@ -1,3 +1,18 @@
+<script>
+  import {charStore} from '$lib/stores/store'
+</script>
+
+<svelte:head>
+  <style>
+    body {
+    background-image: url('http://slayed.ddns.net:8080/hotd.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  </style>
+  <title>{$charStore} | House Of The Dragon</title>
+</svelte:head>
+
 <div class="container mt-5">
   <div class="row">
     <!--characters & dragons-->

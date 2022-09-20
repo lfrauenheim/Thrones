@@ -1,11 +1,11 @@
-<script>
-  import { charStore } from '$lib/stores/store'
-
-  charStore.set('')
-</script>
-
 <svelte:head>
   <title>THRONES</title>
+  <style>
+    body {
+      background-color: #212529;
+    }
+  </style>
+  
 </svelte:head>
 
 <div class="container">
