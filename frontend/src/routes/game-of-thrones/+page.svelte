@@ -9,7 +9,7 @@
   let promise  
 
   async function getChars(p) {
-    const res = await fetch(`http://localhost:3000/api/character/${p}`)
+    const res = await fetch(`http://65.108.54.1:3000/api/character/${p}`)
     const data = await res.json()
     charStore.set(data.name)
     return data
@@ -25,17 +25,17 @@
   <style>
     body {
       background-image: url('http://slayed.ddns.net:8080/got.jpg'); 
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
     }
   </style>
 </svelte:head>
 
-
-<div class="container mt-5">
+<div class="container mt-5 px-0 px-lg-2">
   <div class="row">
     <!--houses-->
-    <div class="col-6">
+    <div class="col-lg-6 col-12">
       <div class="accordion " id="accordion">
         <div class="accordion-item bg-dark border-1 border-secondary">
           <h2 class="accordion-header" id="headingOne">
@@ -47,9 +47,13 @@
             <div class="accordion-body p-2">      
               {#each data.characters[0].tar as character}
                 {#if $charStore == character.name}
-                  <a href="#{character.name}" class="list-group-item fw-bold text-danger" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                  <p class="list-group-item fw-bold text-danger m-0" on:click="{() => handleChars(character.name)}">
+                    {character.name}
+                  </p>
                 {:else}
-                  <a href="#{character.name}" class="list-group-item fw-bold text-light" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                    {character.name}
+                  </p>
                 {/if}
               {/each}  
             </div>
@@ -65,9 +69,13 @@
             <div class="accordion-body p-2">
               {#each data.characters[0].lan as character}
                 {#if $charStore == character.name}
-                  <a href="#{character.name}" class="list-group-item fw-bold text-warning" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                  <p class="list-group-item fw-bold text-warning m-0" on:click="{() => handleChars(character.name)}">
+                    {character.name}
+                  </p>
                 {:else}
-                  <a href="#{character.name}" class="list-group-item fw-bold text-light" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                    {character.name}
+                  </p>
                 {/if}
               {/each} 
             </div>
@@ -82,11 +90,15 @@
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
             <div class="accordion-body p-2">
               {#each data.characters[0].stark as character}
-                {#if $charStore == character.name}
-                  <a href="#{character.name}" class="list-group-item fw-bold text-secondary" on:click="{() => handleChars(character.name)}">{character.name}</a>
-                {:else}
-                  <a href="#{character.name}" class="list-group-item fw-bold text-light" on:click="{() => handleChars(character.name)}">{character.name}</a>
-                {/if}
+              {#if $charStore == character.name}
+                <p class="list-group-item fw-bold text-secondary m-0" on:click="{() => handleChars(character.name)}">
+                  {character.name}
+                </p>
+              {:else}
+                <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                  {character.name}
+                </p>
+              {/if}
               {/each}  
             </div>
           </div>
@@ -101,9 +113,13 @@
             <div class="accordion-body p-2">
               {#each data.characters[0].bar as character}
                 {#if $charStore == character.name}
-                  <a href="#{character.name}" class="list-group-item fw-bold text-warning" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                  <p class="list-group-item fw-bold text-warning m-0" on:click="{() => handleChars(character.name)}">
+                    {character.name}
+                  </p>
                 {:else}
-                  <a href="#{character.name}" class="list-group-item fw-bold text-light" on:click="{() => handleChars(character.name)}">{character.name}</a>
+                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                    {character.name}
+                  </p>
                 {/if}
               {/each} 
             </div>
@@ -112,68 +128,67 @@
       </div>
     </div>
     <!--character card-->
-    {#if promise}
-      <div class="col-6 bg-dark rounded">
-        {#await promise}
-          <!--loading-->
-        {:then data} 
-          <div class="row" in:fade>
-            <div class="col-6">
-              <h2 class="pt-2 text-light">{data.name}</h2>
-              {#if data.born}
-                <p class="text-light"><strong>Born:</strong> {data.born}</p>  
-              {/if}
-              {#if data.died}
-                <p class="text-light"><strong>Died:</strong> {data.died}</p>
-              {/if}
-              {#if data.father}
-                <p class="text-light"><strong>Father:</strong> {data.father}</p>
-              {/if}
-              {#if data.mother}
-                <p class="text-light"><strong>Mother:</strong> {data.mother}</p>
-              {/if}
-              {#if data.spouse}
-                <p class="text-light"><strong>Spouse:</strong> {data.spouse}</p>  
-              {/if}
-              <p class="text-light"><strong>Culture:</strong> {data.culture}</p>
-              <p class="text-light"><strong>Played By:</strong> {data.playedBy}</p>
-              <p class="m-0 text-light"><strong>Allegiances:</strong></p>
-              <ul>
-                {#each data.allegiances as allegiance}
-                  <li class="text-light">{allegiance}</li>
-                {/each}
-              </ul>
-              {#if data.titles.length != 0}
-                <p class="m-0 text-light"><strong>Titles:</strong></p>
+      {#if promise}
+        <div class="col-lg-6 col-12 mt-lg-0 mt-2 bg-dark rounded">
+          {#await promise}
+            <!--loading-->
+          {:then data} 
+            <div class="row" in:fade>
+              <div class="col-6">
+                <h2 class="pt-2 text-light">{data.name}</h2>
+                {#if data.born}
+                  <p class="text-light"><strong>Born:</strong> {data.born}</p>  
+                {/if}
+                {#if data.died}
+                  <p class="text-light"><strong>Died:</strong> {data.died}</p>
+                {/if}
+                {#if data.father}
+                  <p class="text-light"><strong>Father:</strong> {data.father}</p>
+                {/if}
+                {#if data.mother}
+                  <p class="text-light"><strong>Mother:</strong> {data.mother}</p>
+                {/if}
+                {#if data.spouse}
+                  <p class="text-light"><strong>Spouse:</strong> {data.spouse}</p>  
+                {/if}
+                <p class="text-light"><strong>Culture:</strong> {data.culture}</p>
+                <p class="text-light"><strong>Played By:</strong> {data.playedBy}</p>
+                <p class="m-0 text-light"><strong>Allegiances:</strong></p>
                 <ul>
-                  {#each data.titles as title}
-                    <li class="text-light">{title}</li>
+                  {#each data.allegiances as allegiance}
+                    <li class="text-light">{allegiance}</li>
                   {/each}
-                </ul>  
-              {/if}
-              
-              {#if data.aliases.length != 0}
-                <p class="m-0 text-light"><strong>Aliases:</strong></p>
+                </ul>
+                {#if data.titles.length != 0}
+                  <p class="m-0 text-light"><strong>Titles:</strong></p>
+                  <ul>
+                    {#each data.titles as title}
+                      <li class="text-light">{title}</li>
+                    {/each}
+                  </ul>  
+                {/if}              
+                {#if data.aliases.length != 0}
+                  <p class="m-0 text-light"><strong>Aliases:</strong></p>
+                  <ul>
+                    {#each data.aliases as alias}
+                      <li class="text-light">{alias}</li>
+                    {/each}
+                  </ul>  
+                {/if}
+              </div>
+              <div class="col-6">
+                <img src="{data.image}" alt="{data.name}" class="img-fluid pt-2">
+                <p class="m-0 text-light"><strong>Appearances:</strong></p>
                 <ul>
-                  {#each data.aliases as alias}
-                    <li class="text-light">{alias}</li>
+                  {#each data.tvSeries as series}
+                    <li class="text-light">{series}</li>
                   {/each}
-                </ul>  
-              {/if}
+                </ul> 
+              </div>
             </div>
-            <div class="col-6">
-              <img src="{data.image}" alt="{data.name}" class="img-fluid pt-2">
-              <p class="m-0 text-light"><strong>Appearances:</strong></p>
-              <ul>
-                {#each data.tvSeries as series}
-                  <li class="text-light">{series}</li>
-                {/each}
-              </ul> 
-            </div>
-          </div>
-        {/await}
-      </div>
-    {/if}
+          {/await}
+        </div>
+      {/if}
   </div>
 </div>
 
@@ -182,4 +197,5 @@
   .logo {
     width: 10%;
   }
+  
 </style>
