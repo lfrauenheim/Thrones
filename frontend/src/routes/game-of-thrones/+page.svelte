@@ -9,7 +9,7 @@
   let promise  
 
   async function getChars(p) {
-    const res = await fetch(`http://localhost:3000/api/got/character/${p}`)
+    const res = await fetch(`https://thrones-api.firefarm.net/api/got/character/${p}`)
     const data = await res.json()
     charStore.set(data.name)
     return data
