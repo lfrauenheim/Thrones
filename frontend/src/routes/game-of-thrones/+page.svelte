@@ -9,7 +9,7 @@
   let promise  
 
   async function getChars(p) {
-    const res = await fetch(`https://thrones-api.firefarm.net/api/character/${p}`)
+    const res = await fetch(`http://localhost:3000/api/got/character/${p}`)
     const data = await res.json()
     charStore.set(data.name)
     return data
@@ -125,6 +125,30 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item bg-dark border-1 border-secondary">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-controls="collapseFive">
+              <div class="d-flex">
+                <h2 class="fw-bold text-secondary">Allies & Enemies</h2>
+              </div>              
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordion">
+            <div class="accordion-body p-2">
+              {#each data.characters[0].allies as character}
+                {#if $charStore == character.name}
+                  <p class="list-group-item fw-bold text-warning m-0" on:click="{() => handleChars(character.name)}">
+                    {character.name}
+                  </p>
+                {:else}
+                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                    {character.name}
+                  </p>
+                {/if}
+              {/each} 
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!--character card-->
@@ -153,12 +177,14 @@
                 {/if}
                 <p class="text-light"><strong>Culture:</strong> {data.culture}</p>
                 <p class="text-light"><strong>Played By:</strong> {data.playedBy}</p>
-                <p class="m-0 text-light"><strong>Allegiances:</strong></p>
-                <ul>
-                  {#each data.allegiances as allegiance}
-                    <li class="text-light">{allegiance}</li>
-                  {/each}
-                </ul>
+                {#if data.allegiances.length != 0}
+                  <p class="m-0 text-light"><strong>Allegiances:</strong></p>
+                  <ul>
+                    {#each data.allegiances as allegiance}
+                      <li class="text-light">{allegiance}</li>
+                    {/each}
+                  </ul>
+                {/if}
                 {#if data.titles.length != 0}
                   <p class="m-0 text-light"><strong>Titles:</strong></p>
                   <ul>
@@ -178,7 +204,7 @@
               </div>
               <div class="col-6">
                 <img src="{data.image}" alt="{data.name}" class="img-fluid pt-2">
-                <p class="m-0 text-light"><strong>Appearances:</strong></p>
+                <p class="m-0 text-light"><strong>Seasons:</strong></p>
                 <ul>
                   {#each data.tvSeries as series}
                     <li class="text-light">{series}</li>
