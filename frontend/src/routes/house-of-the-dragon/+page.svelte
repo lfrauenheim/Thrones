@@ -8,7 +8,7 @@
 <svelte:head>
   <style>
     body {
-      background-image: url('http://slayed.ddns.net:8080/hotd.jpg'); 
+      background-image: url('https://thrones-store.firefarm.net/hotd.jpg'); 
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;

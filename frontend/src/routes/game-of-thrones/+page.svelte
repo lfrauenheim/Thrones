@@ -9,7 +9,7 @@
   let promise  
 
   async function getChars(p) {
-    const res = await fetch(`http://65.108.54.1:3000/api/character/${p}`)
+    const res = await fetch(`https://thrones-api.firefarm.net/api/character/${p}`)
     const data = await res.json()
     charStore.set(data.name)
     return data
@@ -24,7 +24,7 @@
   <title>{$charStore} | Game Of Thrones</title>
   <style>
     body {
-      background-image: url('http://slayed.ddns.net:8080/got.jpg'); 
+      background-image: url('https://thrones-store.firefarm.net/got.jpg'); 
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -40,7 +40,7 @@
         <div class="accordion-item bg-dark border-1 border-secondary">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
-              <img class="logo" src="http://slayed.ddns.net:8080/House-Targaryen-Main-Shield.PNG.webp" alt="House Targaryen">&nbsp;<h2 class="text-danger fw-bold">House Targaryen</h2>
+              <img class="logo" src="https://thrones-store.firefarm.net/House-Targaryen-Main-Shield.PNG.webp" alt="House Targaryen">&nbsp;<h2 class="text-danger fw-bold">House Targaryen</h2>
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
@@ -62,7 +62,7 @@
         <div class="accordion-item bg-dark border-1 border-secondary">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
-              <img src="http://slayed.ddns.net:8080/House-Lannister-Main-Shield.PNG.webp" alt="House Lannister" class="logo">&nbsp;<h2 class="fw-bold text-warning">House Lannister</h2>
+              <img src="https://thrones-store.firefarm.net/House-Lannister-Main-Shield.PNG.webp" alt="House Lannister" class="logo">&nbsp;<h2 class="fw-bold text-warning">House Lannister</h2>
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
@@ -84,7 +84,7 @@
         <div class="accordion-item bg-dark border-1 border-secondary">
           <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
-              <img src="http://slayed.ddns.net:8080/House-Stark-Main-Shield.PNG.webp" alt="House Stark" class="logo">&nbsp;<h2 class="fw-bold text-secondary">House Stark</h2>
+              <img src="https://thrones-store.firefarm.net/House-Stark-Main-Shield.PNG.webp" alt="House Stark" class="logo">&nbsp;<h2 class="fw-bold text-secondary">House Stark</h2>
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
@@ -106,7 +106,7 @@
         <div class="accordion-item bg-dark border-1 border-secondary">
           <h2 class="accordion-header" id="headingFour">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-controls="collapseFour">
-              <img src="http://slayed.ddns.net:8080/House-Baratheon-Main-Shield.PNG.webp" alt="House Baratheon" class="logo">&nbsp;<h2 class="fw-bold text-warning">House Baratheon</h2>
+              <img src="https://thrones-store.firefarm.net/House-Baratheon-Main-Shield.PNG.webp" alt="House Baratheon" class="logo">&nbsp;<h2 class="fw-bold text-warning">House Baratheon</h2>
             </button>
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordion">
