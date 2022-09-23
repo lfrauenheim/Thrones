@@ -6,11 +6,15 @@ require('dotenv').config()
 
 app.use(cors())
 
-const characters = require('./routes/characters')
-const character = require('./routes/character')
+const gotCharacters = require('./routes/gotCharacters')
+const gotCharacter = require('./routes/gotCharacter')
+const hotdDragons = require('./routes/hotdDragons')
+const hotdDragon = require('./routes/hotdDragon')
 
-app.get('/api/characters', characters)
-app.get('/api/character/:character', character)
+app.get('/api/got/characters', gotCharacters)
+app.get('/api/got/character/:character', gotCharacter)
+app.get('/api/hotd/dragons', hotdDragons)
+app.get('/api/hotd/dragon/:dragon', hotdDragon)
 
 mongoose.connect(process.env.URI, 
   {useNewUrlParser: true},
