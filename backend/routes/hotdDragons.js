@@ -1,4 +1,4 @@
-const Dragon = require('../schemas/hotd_dragon')
+const Dragon = require('../schemas/hotdDragon')
 
 module.exports = async (req, res) => {
   const dragons = await Dragon.find().sort({name: 1})

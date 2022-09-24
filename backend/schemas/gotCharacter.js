@@ -8,7 +8,7 @@ const characterSchema = new Schema({
   died: String,
   father: String,
   mother: String,
-  spouse: String,
+  spouses: String,
   image: String,
   culture: String,
   titles: [String],

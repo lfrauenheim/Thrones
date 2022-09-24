@@ -1,4 +1,4 @@
-const Character = require('../schemas/got_character')
+const Character = require('../schemas/gotCharacter')
 
 module.exports = async (req, res) => {
   const tar = await Character.find({nav: 'tar'}).sort({name: 1})
