@@ -20,7 +20,7 @@
 
 <GOT_Head></GOT_Head>
 
-<div class="container mt-5 px-0 px-lg-2">
+<div class="container mt-5 px-lg-2">
   <div class="row">
     <div class="col-lg-6 col-12">
       <div class="accordion " id="accordion">

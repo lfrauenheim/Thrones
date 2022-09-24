@@ -1,3 +1,7 @@
+<script>
+  import Footer from "./Footer.svelte";
+</script>
+
 <svelte:head>
   <title>THRONES</title>
 </svelte:head>
@@ -8,4 +12,4 @@
     <a href="/house-of-the-dragon" class="btn btn-outline-danger text-light fw-bold mb-1" data-sveltekit-prefetch>HOUSE OF THE DRAGON</a>
   </div>
 </div>
-
+<Footer></Footer>
