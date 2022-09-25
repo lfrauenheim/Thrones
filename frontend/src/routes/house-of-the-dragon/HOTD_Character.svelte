@@ -41,8 +41,12 @@
             {/each}
           </ul>  
         {/if}
-        <p class="text-light"><strong>Culture:</strong> {data.culture}</p>
-        <p class="text-light"><strong>Religion:</strong> {data.religion}</p>
+        {#if data.culture}
+          <p class="text-light"><strong>Culture:</strong> {data.culture}</p>
+        {/if}
+        {#if data.religion}
+          <p class="text-light"><strong>Religion:</strong> {data.religion}</p>  
+        {/if}
         {#if data.father}
           <p class="text-light"><strong>Father:</strong> {data.father}</p>
         {/if}
