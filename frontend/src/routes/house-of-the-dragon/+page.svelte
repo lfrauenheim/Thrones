@@ -3,29 +3,14 @@
   import HOTD_Dragon from './HOTD_Dragon.svelte'
   import HOTD_Character from './HOTD_Character.svelte'
   import {charStore, state} from '$lib/stores/store'
+  import { getDragon, getChar } from '$lib/functions/hotdFetch.js'
 
   export let data
   let promiseDragon
   let promiseCharacter
 
-  async function getDragon(p) {
-    const res = await fetch(`https://thrones-api.firefarm.net/api/hotd/dragon/${p}`)
-    const data = await res.json()
-    charStore.set(data.name)
-    state.set('dragon')
-    return data
-  }
-
   function handleDragon(p) {
     promiseDragon = getDragon(p)
-  }
-
-  async function getChar(p) {
-    const res = await fetch(`https://thrones-api.firefarm.net/api/hotd/character/${p}`)
-    const data = await res.json()
-    charStore.set(data.name)
-    state.set('char')
-    return data
   }
 
   function handleChar(p) {
@@ -130,60 +115,16 @@
           </div>
         </div>
         <div class="accordion-item bg-dark border-1 border-secondary">
-          <h2 class="accordion-header" id="headingFive">
-            <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-controls="collapseFive">
-              <img class="logo" src="https://thrones-store.firefarm.net/Kingsguard-Main-Shield.PNG.webp" alt="House Westerling">&nbsp;<h2 class="text-danger fw-bold">House Westerling</h2>
-            </button>
-          </h2>
-          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordion">
-            <div class="accordion-body p-2">      
-              {#each data.characters[0].westerling as character}
-                {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-danger m-0" on:click="{() => handleChar(character.name)}">
-                    {character.name}
-                  </p>
-                {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChar(character.name)}">
-                    {character.name}
-                  </p>
-                {/if}
-              {/each}  
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item bg-dark border-1 border-secondary">
-          <h2 class="accordion-header" id="headingSix">
-            <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-controls="collapseSix">
-              <img class="logo" src="https://thrones-store.firefarm.net/House-Cole-Shield.webp" alt="House Cole">&nbsp;<h2 class="text-warning fw-bold">House Cole</h2>
-            </button>
-          </h2>
-          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordion">
-            <div class="accordion-body p-2">      
-              {#each data.characters[0].cole as character}
-                {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-warning m-0" on:click="{() => handleChar(character.name)}">
-                    {character.name}
-                  </p>
-                {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChar(character.name)}">
-                    {character.name}
-                  </p>
-                {/if}
-              {/each}  
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item bg-dark border-1 border-secondary">
           <h2 class="accordion-header" id="headingSeven">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-controls="collapseSeven">
-              <h2 class="text-secondary fw-bold">Enemies and Allies</h2>
+              <h2 class="text-warning fw-bold">Enemies and Allies</h2>
             </button>
           </h2>
           <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordion">
             <div class="accordion-body p-2">      
               {#each data.characters[0].other as character}
                 {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-secondary m-0" on:click="{() => handleChar(character.name)}">
+                  <p class="list-group-item fw-bold text-warning m-0" on:click="{() => handleChar(character.name)}">
                     {character.name}
                   </p>
                 {:else}

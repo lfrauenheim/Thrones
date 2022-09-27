@@ -2,6 +2,7 @@
   import { fade } from 'svelte/transition'
   export let promise
 </script>
+
 <div class="col-lg-6 col-12 mt-lg-0 mt-2 bg-dark rounded">
   {#await promise}
     <!--loading-->
