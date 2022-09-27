@@ -12,6 +12,7 @@ const hotdDragons = require('./routes/hotdDragons')
 const hotdDragon = require('./routes/hotdDragon')
 const hotdCharacters = require('./routes/hotdCharacters')
 const hotdCharacter = require('./routes/hotdCharacter')
+const search = require('./routes/search')
 
 app.get('/api/got/characters', gotCharacters)
 app.get('/api/got/character/:character', gotCharacter)
@@ -19,6 +20,7 @@ app.get('/api/hotd/dragons', hotdDragons)
 app.get('/api/hotd/dragon/:dragon', hotdDragon)
 app.get('/api/hotd/characters', hotdCharacters)
 app.get('/api/hotd/character/:character', hotdCharacter)
+app.get('/api/search', search)
 
 mongoose.connect(process.env.URI, 
   {useNewUrlParser: true}
