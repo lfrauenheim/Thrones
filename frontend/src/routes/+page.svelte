@@ -4,7 +4,16 @@
 
 <svelte:head>
   <title>THRONES</title>
+  <style>
+    body {
+      background-image: url('https://thrones-store.firefarm.net/home.jpg'); 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
 </svelte:head>
+
 
 <div class="container">
   <div class="list-group mt-5">
