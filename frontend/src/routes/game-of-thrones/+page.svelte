@@ -2,11 +2,17 @@
   import GOT_Head from './GOT_Head.svelte';
   import GOT_Character from './GOT_Character.svelte';
   import { charStore } from '$lib/stores/store'
-  import { getChar } from '$lib/functions/gotFetch'
   
   export let data
   let promise  
 
+  export async function getChar(p) {
+    const res = await fetch(`https://thrones-api.firefarm.net/api/got/character/${p}`)
+    const data = await res.json()
+    charStore.set(data.name)
+    return data
+  }
+  
   function handleChars(p) {
     promise = getChar(p)
   }
