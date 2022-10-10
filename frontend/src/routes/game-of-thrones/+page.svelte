@@ -138,9 +138,9 @@
         </div>
       </div>
     </div>
-      {#if promise}
-        <GOT_Character {promise} />
-      {/if}
+    {#if promise}
+      <GOT_Character {promise} />
+    {/if}
   </div>
 </div>
 
