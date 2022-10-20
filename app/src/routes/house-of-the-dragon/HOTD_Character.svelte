@@ -1,5 +1,5 @@
 <script>
-  import { nav } from '../../lib/stores/store'
+  import { nav } from '$lib/stores/store'
   import { fade } from 'svelte/transition'
 
   export let promiseCharacter
