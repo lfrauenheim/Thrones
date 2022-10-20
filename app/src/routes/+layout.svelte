@@ -11,6 +11,9 @@
     body, html {
       height: 100%;
       background-color: #212529;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
     }
   </style>
 </svelte:head>
@@ -21,3 +24,6 @@
   <slot></slot>
 </main>
 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+</style>

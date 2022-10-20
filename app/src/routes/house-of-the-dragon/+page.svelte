@@ -2,7 +2,7 @@
   import HOTD_Head from './HOTD_Head.svelte'
   import HOTD_Dragon from './HOTD_Dragon.svelte'
   import HOTD_Character from './HOTD_Character.svelte'
-  import {charStore, state} from '$lib/stores/store'
+  import {charStore, state, nav} from '$lib/stores/store'
 
   export let data
   let promiseDragon
@@ -13,6 +13,7 @@
     const data = await res.json()
     charStore.set(data.name)
     state.set('char')
+    nav.set(data.nav)
     return data
   }
 
@@ -41,7 +42,7 @@
     <!--dragons-->
     <div class="col-lg-6 col-12">
       <div class="accordion " id="accordion">
-        <div class="accordion-item bg-dark border-1 border-secondary">
+        <div class="accordion-item bg-dark border-1 border-light">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
               <img class="logo" src="https://thrones-store.firefarm.net/House-Targaryen-Main-Shield.PNG.webp" alt="House Targaryen">&nbsp;<h2 class="text-danger fw-bold">Dragons</h2>
@@ -69,7 +70,7 @@
             </div>
           </div>
         </div>        
-        <div class="accordion-item bg-dark border-1 border-secondary">
+        <div class="accordion-item bg-dark border-1 border-light">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
               <img class="logo" src="https://thrones-store.firefarm.net/House-Targaryen-Main-Shield.PNG.webp" alt="House Targaryen">&nbsp;<h2 class="text-danger fw-bold">House Targaryen</h2>
@@ -97,7 +98,7 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item bg-dark border-1 border-secondary">
+        <div class="accordion-item bg-dark border-1 border-light">
           <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
               <img class="logo" src="https://thrones-store.firefarm.net/House-Velaryon-Main-Shield.PNG.webp" alt="House Velaryon">&nbsp;<h2 class="text-primary fw-bold">House Velaryon</h2>
@@ -125,7 +126,7 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item bg-dark border-1 border-secondary">
+        <div class="accordion-item bg-dark border-1 border-light">
           <h2 class="accordion-header" id="headingFour">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-controls="collapseFour">
               <img class="logo" src="https://thrones-store.firefarm.net/House-Hightower-Main-Shield.PNG.webp" alt="House Hightower">&nbsp;<h2 class="text-success fw-bold">House Hightower</h2>
@@ -153,7 +154,7 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item bg-dark border-1 border-secondary">
+        <div class="accordion-item bg-dark border-1 border-light">
           <h2 class="accordion-header" id="headingSeven">
             <button class="accordion-button collapsed fw-bold fs-5 bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-controls="collapseSeven">
               <h2 class="text-warning fw-bold">Enemies and Allies</h2>
