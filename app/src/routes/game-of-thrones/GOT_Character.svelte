@@ -80,6 +80,7 @@
           <div class="modal-body">
             <div class="row" in:fade>
               <div class="col-6">
+                <h2 class="pt-2 text-light">{data.name}</h2>
                 {#if data.born}
                   <p class="text-light"><strong>Born:</strong> {data.born}</p>  
                 {/if}
@@ -142,12 +143,3 @@
     </div>
   </div>
 </div>
-
-<style>
-  li {
-    list-style-type: none;
-  }
-  ul {
-    padding: 0;
-  }
-</style>
