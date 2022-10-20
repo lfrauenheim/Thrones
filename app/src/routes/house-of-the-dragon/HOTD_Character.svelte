@@ -71,16 +71,16 @@
         <!--personal-->
         <div class="mt-1">
           <h2 class="text-light text-center {color} p-3 mb-0 rounded">Personal information</h2> 
-          <div class="d-flex border-bottom">
-            {#if data.aliases.length != 0}
+          {#if data.aliases.length != 0}
+            <div class="d-flex border-bottom">
               <p class="my-1 text-light"><strong>Aliases</strong></p>
               <ul class="ms-auto my-1">
                 {#each data.aliases as alias}
                   <li class="text-light text-end">{alias}</li>
                 {/each}
-              </ul>  
-            {/if}
-          </div>
+              </ul>   
+            </div>
+          {/if}
           {#if data.culture}
             <div class="d-flex my-1 border-bottom">
               <p class="text-light mb-1 mt-0"><strong>Culture</strong></p>
@@ -229,16 +229,16 @@
                 <!--personal-->
                 <div class="mt-1">
                   <h2 class="text-light text-center {color} p-3 mb-0 rounded">Personal information</h2> 
-                  <div class="d-flex border-bottom">
-                    {#if data.aliases.length != 0}
+                  {#if data.aliases.length != 0}
+                    <div class="d-flex border-bottom">
                       <p class="my-1 text-light"><strong>Aliases</strong></p>
                       <ul class="ms-auto my-1">
                         {#each data.aliases as alias}
                           <li class="text-light text-end">{alias}</li>
                         {/each}
-                      </ul>  
-                    {/if}
-                  </div>
+                      </ul>   
+                    </div>
+                  {/if}
                   {#if data.culture}
                     <div class="d-flex my-1 border-bottom">
                       <p class="text-light mb-1 mt-0"><strong>Culture</strong></p>
