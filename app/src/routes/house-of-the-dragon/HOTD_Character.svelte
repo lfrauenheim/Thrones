@@ -216,8 +216,8 @@
                   </div>
                   <div class="d-flex border-bottom">
                     {#if data.titles.length != 0}
-                      <p class="mb-1 mt-0 text-light"><strong>Titles</strong></p>
-                      <ul class="ms-auto mb-1">
+                      <p class="my-1 text-light"><strong>Titles</strong></p>
+                      <ul class="ms-auto my-1">
                         {#each data.titles as title}
                           <li class="text-light text-end">{title}</li>
                         {/each}
