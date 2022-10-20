@@ -126,7 +126,7 @@
               <p class="m-0 text-light"><strong>Siblings</strong></p>
               <ul class="ms-auto m-0">
                 {#each data.siblings as sibling}
-                  <li class="text-light">{sibling}</li>
+                  <li class="text-light text-end">{sibling}</li>
                 {/each}
               </ul>  
             </div>
@@ -284,7 +284,7 @@
                       <p class="m-0 text-light"><strong>Siblings</strong></p>
                       <ul class="ms-auto m-0">
                         {#each data.siblings as sibling}
-                          <li class="text-light">{sibling}</li>
+                          <li class="text-light text-end">{sibling}</li>
                         {/each}
                       </ul>  
                     </div>
