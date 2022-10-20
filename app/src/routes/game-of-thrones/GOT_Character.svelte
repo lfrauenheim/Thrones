@@ -80,7 +80,6 @@
           <div class="modal-body">
             <div class="row" in:fade>
               <div class="col-6">
-                <h2 class="pt-2 text-light">{data.name}</h2>
                 {#if data.born}
                   <p class="text-light"><strong>Born:</strong> {data.born}</p>  
                 {/if}
@@ -106,6 +105,19 @@
                     {/each}
                   </ul>
                 {/if}
+              </div>
+              <div class="col-6">
+                <img src="{data.image}" alt="{data.name}" class="img-fluid pt-2">
+                <p class="m-0 text-light"><strong>Seasons:</strong></p>
+                <ul>
+                  {#each data.tvSeries as series}
+                    <li class="text-light">{series}</li>
+                  {/each}
+                </ul> 
+              </div>
+            </div>
+            <div class="row" in:fade>
+              <div class="col-12">
                 {#if data.titles.length != 0}
                   <p class="m-0 text-light"><strong>Titles:</strong></p>
                   <ul>
@@ -123,15 +135,6 @@
                   </ul>  
                 {/if}
               </div>
-              <div class="col-6">
-                <img src="{data.image}" alt="{data.name}" class="img-fluid pt-2">
-                <p class="m-0 text-light"><strong>Seasons:</strong></p>
-                <ul>
-                  {#each data.tvSeries as series}
-                    <li class="text-light">{series}</li>
-                  {/each}
-                </ul> 
-              </div>
             </div>
           </div>
         {/await}
@@ -139,3 +142,12 @@
     </div>
   </div>
 </div>
+
+<style>
+  li {
+    list-style-type: none;
+  }
+  ul {
+    padding: 0;
+  }
+</style>

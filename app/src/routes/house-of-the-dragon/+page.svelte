@@ -51,11 +51,17 @@
             <div class="accordion-body p-2">      
               {#each data.dragons as dragon}
                 {#if $charStore == dragon.name}
-                  <p class="list-group-item fw-bold text-danger m-0" role="button" data-bs-toggle="modal" data-bs-target="#dragons" on:click="{() => handleDragon(dragon.name)}">
+                  <p class="list-group-item fw-bold text-danger m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#dragons" on:click="{() => handleDragon(dragon.name)}">
+                    {dragon.name}
+                  </p>
+                  <p class="list-group-item fw-bold text-danger m-0 d-none d-lg-block" role="button" on:click="{() => handleDragon(dragon.name)}">
                     {dragon.name}
                   </p>
                 {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#dragons" on:click="{() => handleDragon(dragon.name)}">
+                  <p class="list-group-item fw-bold text-light m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#dragons" on:click="{() => handleDragon(dragon.name)}">
+                    {dragon.name}
+                  </p>
+                  <p class="list-group-item fw-bold text-light m-0 d-none d-lg-block" role="button" on:click="{() => handleDragon(dragon.name)}">
                     {dragon.name}
                   </p>
                 {/if}
@@ -73,11 +79,17 @@
             <div class="accordion-body p-2">      
               {#each data.characters[0].tar as character}
                 {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-danger m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                  <p class="list-group-item fw-bold text-danger m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                    {character.name}
+                  </p>
+                  <p class="list-group-item fw-bold text-danger m-0 d-none d-lg-block" role="button" on:click="{() => handleChar(character.name)}">
                     {character.name}
                   </p>
                 {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                  <p class="list-group-item fw-bold text-light m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                    {character.name}
+                  </p>
+                  <p class="list-group-item fw-bold text-light m-0 d-none d-lg-block" role="button" on:click="{() => handleChar(character.name)}">
                     {character.name}
                   </p>
                 {/if}
@@ -95,11 +107,17 @@
             <div class="accordion-body p-2">      
               {#each data.characters[0].vel as character}
                 {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-primary m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                  <p class="list-group-item fw-bold text-primary m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                    {character.name}
+                  </p>
+                  <p class="list-group-item fw-bold text-primary m-0 d-none d-lg-block" role="button" on:click="{() => handleChar(character.name)}">
                     {character.name}
                   </p>
                 {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                  <p class="list-group-item fw-bold text-light m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                    {character.name}
+                  </p>
+                  <p class="list-group-item fw-bold text-light m-0 d-none d-lg-block" role="button" on:click="{() => handleChar(character.name)}">
                     {character.name}
                   </p>
                 {/if}
@@ -117,11 +135,17 @@
             <div class="accordion-body p-2">      
               {#each data.characters[0].hightower as character}
                 {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-success m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                  <p class="list-group-item fw-bold text-success m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                    {character.name}
+                  </p>
+                  <p class="list-group-item fw-bold text-success m-0 d-none d-lg-block" role="button" on:click="{() => handleChar(character.name)}">
                     {character.name}
                   </p>
                 {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                  <p class="list-group-item fw-bold text-light m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                    {character.name}
+                  </p>
+                  <p class="list-group-item fw-bold text-light m-0 d-none d-lg-block" role="button" on:click="{() => handleChar(character.name)}">
                     {character.name}
                   </p>
                 {/if}
@@ -139,13 +163,19 @@
             <div class="accordion-body p-2">      
               {#each data.characters[0].other as character}
                 {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-warning m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                  <p class="list-group-item fw-bold text-warning m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                    {character.name}
+                  </p>
+                  <p class="list-group-item fw-bold text-warning m-0 d-none d-lg-block" role="button" on:click="{() => handleChar(character.name)}">
                     {character.name}
                   </p>
                 {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
+                  <p class="list-group-item fw-bold text-light m-0 d-lg-none" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChar(character.name)}">
                     {character.name}
-                  </p>        
+                  </p>
+                  <p class="list-group-item fw-bold text-light m-0 d-none d-lg-block" role="button" on:click="{() => handleChar(character.name)}">
+                    {character.name}
+                  </p>                
                 {/if}
               {/each}  
             </div>
