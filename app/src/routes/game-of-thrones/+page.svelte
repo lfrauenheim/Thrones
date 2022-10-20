@@ -34,11 +34,11 @@
             <div class="accordion-body p-2">      
               {#each data.characters[0].tar as character}
                 {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-danger m-0" on:click="{() => handleChars(character.name)}">
+                  <p class="list-group-item fw-bold text-danger m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                     {character.name}
                   </p>
                 {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                  <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                     {character.name}
                   </p>
                 {/if}
@@ -56,11 +56,11 @@
             <div class="accordion-body p-2">
               {#each data.characters[0].lan as character}
                 {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-warning m-0" on:click="{() => handleChars(character.name)}">
+                  <p class="list-group-item fw-bold text-warning m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                     {character.name}
                   </p>
                 {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                  <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                     {character.name}
                   </p>
                 {/if}
@@ -78,11 +78,11 @@
             <div class="accordion-body p-2">
               {#each data.characters[0].stark as character}
               {#if $charStore == character.name}
-                <p class="list-group-item fw-bold text-secondary m-0" on:click="{() => handleChars(character.name)}">
+                <p class="list-group-item fw-bold text-secondary m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                   {character.name}
                 </p>
               {:else}
-                <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                   {character.name}
                 </p>
               {/if}
@@ -100,11 +100,11 @@
             <div class="accordion-body p-2">
               {#each data.characters[0].bar as character}
                 {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-warning m-0" on:click="{() => handleChars(character.name)}">
+                  <p class="list-group-item fw-bold text-warning m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                     {character.name}
                   </p>
                 {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                  <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                     {character.name}
                   </p>
                 {/if}
@@ -124,11 +124,11 @@
             <div class="accordion-body p-2">
               {#each data.characters[0].allies as character}
                 {#if $charStore == character.name}
-                  <p class="list-group-item fw-bold text-secondary m-0" on:click="{() => handleChars(character.name)}">
+                  <p class="list-group-item fw-bold text-secondary m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                     {character.name}
                   </p>
                 {:else}
-                  <p class="list-group-item fw-bold text-light m-0" role="button" on:click="{() => handleChars(character.name)}">
+                  <p class="list-group-item fw-bold text-light m-0" role="button" data-bs-toggle="modal" data-bs-target="#characters" on:click="{() => handleChars(character.name)}">
                     {character.name}
                   </p>
                 {/if}

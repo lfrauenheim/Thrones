@@ -93,10 +93,10 @@
   <!-- Modal -->
   <div class="modal fade" id="characters" tabindex="-1" aria-labelledby="CharacterModal" aria-hidden="true">
     <div class="modal-dialog">
-      {#await promiseCharacter}
-        <!--loading-->
-      {:then data} 
-        <div class="modal-content bg-dark">
+      <div class="modal-content bg-dark">
+        {#await promiseCharacter}
+            <!--loading-->
+        {:then data} 
           <div class="modal-header">
             <h2 class="pt-2 text-light">{data.name}</h2>
             <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -180,8 +180,8 @@
               </div>
             </div>
           </div>
-        </div>   
-      {/await}
+        {/await}
+      </div>   
     </div>
   </div>
 </div>
