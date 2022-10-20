@@ -148,7 +148,7 @@
           
           <div class="d-flex my-1 border-bottom">
             <p class="text-light mb-1 mt-0"><strong>Played By</strong></p>
-            <p class="text-light ms-auto mb-1 mt-0">{data.culture}</p>
+            <p class="text-light ms-auto mb-1 mt-0">{data.playedBy}</p>
           </div>
           
           <div class="d-flex">
@@ -306,7 +306,7 @@
                   
                   <div class="d-flex my-1 border-bottom">
                     <p class="text-light mb-1 mt-0"><strong>Played By</strong></p>
-                    <p class="text-light ms-auto mb-1 mt-0">{data.culture}</p>
+                    <p class="text-light ms-auto mb-1 mt-0">{data.playedBy}</p>
                   </div>
                   
                   <div class="d-flex">
