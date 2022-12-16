@@ -5,18 +5,17 @@
   export let promiseCharacter
   let color
 
-  $: if($nav === "tar") {color = 'bg-danger'}
+  $: if ($nav === "tar") {color = 'bg-danger'}
   $: if ($nav === "vel") {color = 'bg-primary'}
   $: if ($nav === "hightower") {color = 'bg-success'}
   $: if ($nav === "other") {color = 'bg-warning'}
-  $: console.log(promiseCharacter)
 </script>
 
 
 <div class="col-lg-6 d-none d-lg-block mt-lg-0 bg-dark border border-light rounded p-2 mb-5" >
   {#await promiseCharacter}
     <!--loading-->
-    {:then data} 
+  {:then data} 
     <div class="row">
       <div class="col-12" transition:fade>
         <div>
